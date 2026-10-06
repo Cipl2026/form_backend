@@ -1,0 +1,19 @@
+services:
+
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: form_backend
+    labels:
+      autodeploy.owner_id: "6a88317adfbae6f2689bac47"
+      autodeploy.project_id: "6ac485df3b1212f5907a5fef"
+      autodeploy.job_id: "6ac485a23b1212f5907a5feb"
+      autodeploy.managed: "true"
+      autodeploy.service: "backend"
+    restart: unless-stopped
+    ports:
+      - "3007:3007"
+    env_file:
+      - ./backend/.env
