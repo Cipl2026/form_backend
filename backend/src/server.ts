@@ -79,7 +79,7 @@ app.use(
 app.get("/", (_req, res) => {
   res.status(200).json({
     status: "ok",
-    message: "Employee API is running",
+    message: "Employee API is running Successfully.",
     health: "/api/health",
   });
 });
